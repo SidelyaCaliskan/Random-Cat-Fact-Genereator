@@ -1,0 +1,21 @@
+name: learning_meow
+description: A new Flutter project.
+publish_to: "none" # This specifies that the package should not be published to pub.dev.
+version: 0.1.0
+
+environment:
+  sdk: ">=3.0.6 <4.0.0" # Your SDK version constraints.
+
+dependencies:
+  flutter:
+    sdk: flutter # This specifies the Flutter SDK as a dependency.
+  http: ^0.13.3
+dev_dependencies:
+  flutter_test:
+    sdk: flutter # This includes the Flutter testing framework.
+  flutter_lints: ^2.0.0 # This includes the linting tools for Flutter.
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assetFolder/Cat.png
