@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:http/http.dart' as http;
@@ -59,13 +60,10 @@ class _CatFactsScreenState extends State<CatFactsScreen> {
                 children: [
                   Image.asset(
                     'assetFolder/Cat.png',
-                    width: MediaQuery.of(context)
-                        .size
-                        .width, // Set the width to the screen width
-                    height: MediaQuery.of(context).size.height *
-                        0.90, // Set the height to half the screen height
+                    width: MediaQuery.of(context).size.width,
+                    height: MediaQuery.of(context).size.height * 0.90,
                     fit: BoxFit.cover,
-                  ), // Replace with your image asset path
+                  ),
                   Positioned(
                     left: 150,
                     top: 450,
@@ -74,21 +72,18 @@ class _CatFactsScreenState extends State<CatFactsScreen> {
                       height: 100,
                       padding: EdgeInsets.all(10),
                       decoration: BoxDecoration(
-                        color: Colors.white.withOpacity(
-                            0.7), // Optional for better readability
-                        borderRadius: BorderRadius.circular(
-                            10), // Optional for rounded corners
+                        color: Colors.white.withOpacity(0.7),
+                        borderRadius: BorderRadius.circular(10),
                       ),
                       child: SingleChildScrollView(
-                        // Makes the text scrollable
-                        child: Text(
+                        child: AutoSizeText(
                           _randomFact!,
+                          style: TextStyle(fontSize: 16, color: Colors.black),
                           textAlign: TextAlign.justify,
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.black,
-                          ),
-                          overflow: TextOverflow.fade, // Handles text overflow
+                          minFontSize: 10, // Minimum text size
+                          maxLines: 4, // Maximum lines
+                          overflow:
+                              TextOverflow.ellipsis, // Ellipsis for overflow
                         ),
                       ),
                     ),

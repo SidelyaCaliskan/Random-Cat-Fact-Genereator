@@ -10,6 +10,7 @@ dependencies:
   flutter:
     sdk: flutter # This specifies the Flutter SDK as a dependency.
   http: ^0.13.3
+  auto_size_text: ^3.0.0
 dev_dependencies:
   flutter_test:
     sdk: flutter # This includes the Flutter testing framework.
