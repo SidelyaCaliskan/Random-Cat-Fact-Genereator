@@ -1,3 +1,3 @@
-# learning_meow
+# Random Cat Generator
 
 A new Flutter project.
